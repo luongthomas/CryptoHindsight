@@ -13,16 +13,23 @@ import FSCalendar
 
 class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 
-    var currentDateString: String?
+    var currentDateString = ""
    
     var pickerData = ["Bitcoin", "USD", "Chicken Nuggets"]
     var myPickerView: UIPickerView!
    
-    @IBOutlet weak var UnitTextLabel: UITextField!
-    @IBOutlet weak var currentDayLbl: UILabel!
+    var amtOfCurrencyToBuy = 0
+    var unitsOfCurrency = "USD"
     
+    @IBOutlet weak var currentDayLbl: UILabel!
     @IBOutlet weak var TryMeBtn: LGButton!
-
+    
+    // Units
+    @IBOutlet weak var amountBought: UITextField!
+    @IBOutlet weak var UnitTextLabel: UITextField!
+    @IBOutlet weak var totalProfitLbl: UILabel!
+    @IBOutlet weak var summaryProfitLbl: UILabel!
+    
     @IBAction func performSegue(_ sender: LGButton) {
         print("Perform segue")
         self.performSegue(withIdentifier: "toMain", sender: self)
@@ -32,7 +39,10 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
     @IBAction func unwindFromVC(_ sender: UIStoryboardSegue) {
         if sender.source is CalendarSegue {
             if let senderVC = sender.source as? CalendarSegue {
-                currentDateString = senderVC.selectedDate
+                if let currentDateString = senderVC.selectedDate {
+                    print(currentDateString)
+                    getPriceOfDay(day: currentDateString)
+                }
                 print("Hello from VC")
             }
             
@@ -48,7 +58,8 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
     
     override func viewDidAppear(_ animated: Bool) {
         print("Hi, I appeared")
-         currentDayLbl.text = currentDateString
+        currentDayLbl.text = currentDateString
+        
     }
     
     override func viewDidLoad() {
@@ -59,7 +70,7 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
         
         
         print(currentDayLbl.text ?? "")
-        openJSON()
+        
         
         
         
@@ -89,7 +100,11 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
     }
     
     
-    func openJSON() {
+    func getPriceOfDay(day: String="") {
+        print("getting price of day, day=\(day)")
+        if day == "" {
+            return
+        }
         if let path = Bundle.main.path(forResource: "bitcoinData", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
@@ -97,6 +112,10 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
                 
                 for (key, value):(String, JSON) in jsonObj {
                     //print(key, value)
+                    // Way of checking if substring
+                    if key.range(of: day) != nil {
+                        print("Day: \(day). Price:\(value)")
+                    }
                 }
                 
             } catch let error {
@@ -105,11 +124,6 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
         } else {
             print("Invalid filename/path.")
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     
