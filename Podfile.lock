@@ -1,0 +1,29 @@
+PODS:
+  - Alamofire (4.5.1)
+  - Charts (3.0.4):
+    - Charts/Core (= 3.0.4)
+  - Charts/Core (3.0.4)
+  - FSCalendar (2.7.9)
+  - LGButton (1.0.4)
+  - SnapKit (4.0.0)
+  - SwiftyJSON (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Charts
+  - FSCalendar
+  - LGButton
+  - SnapKit
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Charts: 0705898046257443f0afbbc3179f4b67507b6e48
+  FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
+  LGButton: 40c36e2b7a274d9cb263420e568bc8890832954e
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+
+PODFILE CHECKSUM: 275e12d2b195c8a85fb08b13c841ca77cae70fb6
+
+COCOAPODS: 1.3.1
