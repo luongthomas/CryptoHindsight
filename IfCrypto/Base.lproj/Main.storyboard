@@ -163,6 +163,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Z8f-wr-WaU" secondAttribute="trailing" id="1VH-vj-wOO"/>
                                     <constraint firstItem="Z8f-wr-WaU" firstAttribute="top" secondItem="VWI-mk-2HJ" secondAttribute="top" id="4NM-xP-IvI"/>
+                                    <constraint firstAttribute="height" constant="168" id="7Rs-Uz-KOF"/>
                                     <constraint firstAttribute="bottom" secondItem="Z8f-wr-WaU" secondAttribute="bottom" id="GRj-Qu-G61"/>
                                     <constraint firstItem="Z8f-wr-WaU" firstAttribute="leading" secondItem="VWI-mk-2HJ" secondAttribute="leading" id="iWE-e9-Zf6"/>
                                 </constraints>
@@ -201,6 +202,39 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="titleString" value="Calculate"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="showTouchFeedback" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="calculateProfits:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AgI-HG-70g"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5G-vo-4NZ" userLabel="PriceView">
+                                <rect key="frame" x="16" y="214" width="343" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="0MC-iW-f7y">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Given that the price of" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azw-Yo-vwN">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin was 300 dollars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gd8-2l-U8m">
+                                                <rect key="frame" x="0.0" y="25" width="343" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="0MC-iW-f7y" firstAttribute="top" secondItem="F5G-vo-4NZ" secondAttribute="top" id="CIi-Bx-de6"/>
+                                    <constraint firstAttribute="trailing" secondItem="0MC-iW-f7y" secondAttribute="trailing" id="LBQ-fk-SVZ"/>
+                                    <constraint firstAttribute="height" constant="50" id="TbV-lo-XIR"/>
+                                    <constraint firstAttribute="bottom" secondItem="0MC-iW-f7y" secondAttribute="bottom" id="lRb-0Q-eYm"/>
+                                    <constraint firstItem="0MC-iW-f7y" firstAttribute="leading" secondItem="F5G-vo-4NZ" secondAttribute="leading" id="yte-SP-8Rz"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -208,6 +242,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="y2f-c0-Hdv" secondAttribute="bottom" constant="233" id="2DJ-m4-Eph"/>
                             <constraint firstItem="QUY-uD-hdS" firstAttribute="leading" secondItem="FlH-4J-hvo" secondAttribute="trailing" constant="17" id="3de-8H-MOk"/>
                             <constraint firstItem="y2f-c0-Hdv" firstAttribute="top" secondItem="QUY-uD-hdS" secondAttribute="bottom" constant="30" id="4x2-kg-4M4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F5G-vo-4NZ" secondAttribute="trailing" constant="16" id="6Mc-Od-W5l"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VWI-mk-2HJ" secondAttribute="trailing" constant="16" id="9P2-s8-2U4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jrw-eX-DYZ" secondAttribute="trailing" constant="86" id="CnO-QJ-eKv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QUY-uD-hdS" secondAttribute="trailing" constant="35" id="EFt-3x-ahX"/>
@@ -219,9 +254,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y2f-c0-Hdv" secondAttribute="trailing" constant="68" id="azp-O5-KWd"/>
                             <constraint firstAttribute="bottom" secondItem="VWI-mk-2HJ" secondAttribute="bottom" constant="461" id="b5k-g5-5xW"/>
                             <constraint firstItem="Jrw-eX-DYZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="cD1-Im-tPu"/>
+                            <constraint firstItem="VWI-mk-2HJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="eZV-Il-Mxh"/>
+                            <constraint firstItem="VWI-mk-2HJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="iyc-uz-2qB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VWI-mk-2HJ" secondAttribute="trailing" constant="16" id="jBo-AG-1DR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jrw-eX-DYZ" secondAttribute="bottom" constant="20" id="p83-Zq-Hrq"/>
                             <constraint firstItem="zVC-di-PhE" firstAttribute="trailing" secondItem="y2f-c0-Hdv" secondAttribute="trailing" id="qBy-9r-9XF"/>
                             <constraint firstItem="VWI-mk-2HJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qMh-hp-MIK"/>
+                            <constraint firstItem="F5G-vo-4NZ" firstAttribute="top" secondItem="VWI-mk-2HJ" secondAttribute="bottom" constant="8" id="sYi-BV-imn"/>
+                            <constraint firstItem="F5G-vo-4NZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="teq-wt-KoB"/>
                             <constraint firstItem="VWI-mk-2HJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wA6-8d-sJh"/>
                             <constraint firstItem="QUY-uD-hdS" firstAttribute="baseline" secondItem="FlH-4J-hvo" secondAttribute="baseline" id="zmH-Hm-AdE"/>
                         </constraints>
@@ -232,6 +272,7 @@
                         <outlet property="UnitTextLabel" destination="QUY-uD-hdS" id="fil-U6-cz3"/>
                         <outlet property="amountBought" destination="FlH-4J-hvo" id="FMf-pb-pTE"/>
                         <outlet property="currentDayLbl" destination="zVC-di-PhE" id="Iaa-Pg-ywM"/>
+                        <outlet property="priceStatement" destination="Azw-Yo-vwN" id="Hmf-xF-Ad0"/>
                         <outlet property="summaryProfitLbl" destination="2Ec-Dh-UjL" id="VHn-at-Ciq"/>
                         <outlet property="totalProfitLbl" destination="01h-Gc-9K6" id="swM-dl-c1E"/>
                         <segue destination="4iN-Nt-bQg" kind="presentation" identifier="toMain" id="R93-Mu-BVn"/>

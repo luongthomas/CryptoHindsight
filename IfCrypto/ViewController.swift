@@ -13,9 +13,12 @@ import FSCalendar
 
 class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 
+    var priceOfPastDay = "4102"
     var currentDateString = ""
-   
-    var pickerData = ["Bitcoin", "USD", "Chicken Nuggets"]
+    var currentCryptoPriceToday = ""
+    
+    
+    var pickerData = ["Bitcoin", "USD"]
     var myPickerView: UIPickerView!
    
     var amtOfCurrencyToBuy = 0
@@ -30,6 +33,7 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
     @IBOutlet weak var totalProfitLbl: UILabel!
     @IBOutlet weak var summaryProfitLbl: UILabel!
     
+    @IBOutlet weak var priceStatement: UILabel!
     @IBAction func performSegue(_ sender: LGButton) {
         print("Perform segue")
         self.performSegue(withIdentifier: "toMain", sender: self)
@@ -49,12 +53,6 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
         }
     }
     
-    
- 
-    
-    @IBAction func hello(_ sender: Any) {
-        print("Hello world")
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         print("Hi, I appeared")
@@ -127,9 +125,34 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
     }
 
     
+    @IBAction func calculateProfits(_ sender: Any) {
+        print(calculateProfits())
+        print("hello calculate")
+    }
+   
+    
+    //MARK:- Calculating Bitcoin's Price
+    func calculateProfits() -> String{
+        let costBeforePerCoin = "30"
+        let costNowPerCoin = "14000"
+        
+        let amountMoneyInvested = "50"
+        
+        let amountCoinsBefore:Double = (Double(amountMoneyInvested)! / Double(costBeforePerCoin)!)
+        
+        let valueOfTotalCoinsToday:Double = Double(amountCoinsBefore) * Double(costNowPerCoin)!
+        
+        
+        let profits = "\(valueOfTotalCoinsToday)"
+        print("You would have \(valueOfTotalCoinsToday)")
+        
+        return profits
+    }
     
     
-    
+    func updateUIWithProfits() {
+        
+    }
     
     
     //MARK:- PickerView Delegate & DataSource
