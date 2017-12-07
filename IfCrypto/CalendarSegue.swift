@@ -41,7 +41,7 @@ class CalendarSegue: UIViewController, FSCalendarDelegate, FSCalendarDataSource 
         if segue.identifier == "thisIsSegueIdentifier" {
             let viewControllerB = segue.destination as! MainCryptoInput
             if let date = calendar.selectedDate {
-                viewControllerB.currentDateString = date.description
+                viewControllerB.pastDateString = date.description
                 selectedDate = date.description
             }
             

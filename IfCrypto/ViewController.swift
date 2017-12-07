@@ -14,8 +14,8 @@ import Alamofire
 
 class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 
-    var priceOfPastDay = "4102"
-    var currentDateString = ""
+    var priceOfPastDay = ""
+    var pastDateString = ""
     var currentCryptoPriceToday = ""
     
     
@@ -44,9 +44,9 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
     @IBAction func unwindFromVC(_ sender: UIStoryboardSegue) {
         if sender.source is CalendarSegue {
             if let senderVC = sender.source as? CalendarSegue {
-                if let currentDateString = senderVC.selectedDate {
-                    print(currentDateString)
-                    getPriceOfDay(day: currentDateString)
+                if let selectedDate = senderVC.selectedDate {
+                    pastDateString = selectedDate
+                    //getPriceOfDay(day: selectedDate)
                 }
                 print("Hello from VC")
             }
@@ -57,7 +57,7 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
     
     override func viewDidAppear(_ animated: Bool) {
         print("Hi, I appeared")
-        currentDayLbl.text = currentDateString
+        currentDayLbl.text = pastDateString
         
     }
     
@@ -114,6 +114,7 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
                     // Way of checking if substring
                     if key.range(of: day) != nil {
                         print("Day: \(day). Price:\(value)")
+                        priceOfPastDay = value.stringValue
                     }
                 }
                 
@@ -133,12 +134,17 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
     
     //MARK:- Calculating Bitcoin's Price
     func calculateProfits() -> String{
+        
+        getPriceOfDay(day: pastDateString)
         if priceOfPastDay == "" {
             print("price of past day is not determined")
             return ""
         } else {
+            
             print("price of Past Day is: \(priceOfPastDay)")
         }
+        
+        
         
         // Closures https://stackoverflow.com/questions/43923189/why-does-unexpected-non-void-return-value-in-void-function-happen
         getCurrentBitcoinPrice() { (price) in
