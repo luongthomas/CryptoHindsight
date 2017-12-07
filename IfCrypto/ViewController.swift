@@ -10,6 +10,7 @@ import UIKit
 import SwiftyJSON
 import LGButton
 import FSCalendar
+import Alamofire
 
 class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 
@@ -66,7 +67,6 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
         
         
         
-        
         print(currentDayLbl.text ?? "")
         
         
@@ -103,6 +103,7 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
         if day == "" {
             return
         }
+        
         if let path = Bundle.main.path(forResource: "bitcoinData", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
@@ -127,12 +128,38 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
     
     @IBAction func calculateProfits(_ sender: Any) {
         print(calculateProfits())
-        print("hello calculate")
     }
    
     
     //MARK:- Calculating Bitcoin's Price
     func calculateProfits() -> String{
+        if priceOfPastDay == "" {
+            print("price of past day is not determined")
+            return ""
+        } else {
+            print("price of Past Day is: \(priceOfPastDay)")
+        }
+        
+        // Closures https://stackoverflow.com/questions/43923189/why-does-unexpected-non-void-return-value-in-void-function-happen
+        getCurrentBitcoinPrice() { (price) in
+            print(price)
+            self.currentCryptoPriceToday = price
+            
+            if self.currentCryptoPriceToday == "" {
+                print("price of crypto today is not determined")
+            } else {
+                print("price of crypto today is: \(self.currentCryptoPriceToday)")
+            }
+        }
+        
+        
+        if amountBought.text == "" {
+            print("value of amount bought is not been entered")
+            return ""
+        } else {
+            print("amount of crypto bought is: \(String(describing: amountBought.text) )")
+        }
+        
         let costBeforePerCoin = "30"
         let costNowPerCoin = "14000"
         
@@ -151,6 +178,10 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
     
     
     func updateUIWithProfits() {
+        if calculateProfits() == "" {
+            print("will not update UI with profits")
+        }
+        
         
     }
     
@@ -183,7 +214,7 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
         
         // UIPickerView
         
-        //        textField.inputView = self.myPickerView
+        // textField.inputView = self.myPickerView
         
         
         
@@ -207,5 +238,31 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
         UnitTextLabel.resignFirstResponder()
     }
 
+    
+    
+    //MARK:- API Bitcoin price call
+    func getCurrentBitcoinPrice(completion: @escaping (String) -> Void) {
+        let url = "https://api.coinmarketcap.com/v1/ticker/"
+        
+        
+        Alamofire.request(url, method: .get).validate().responseJSON { response in
+            
+            switch response.result {
+            case .success(let value):
+                var json = JSON(value)
+                
+                
+                let price = json[0]["price_usd"].stringValue
+                completion(price)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+    }
+    
+    
+    
 }
 
