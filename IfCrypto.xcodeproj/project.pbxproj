@@ -17,6 +17,10 @@
 		2422EF221FD4C2FE00454C08 /* bitcoinData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2422EF211FD4C2FD00454C08 /* bitcoinData.json */; };
 		2422EF241FD4CB4400454C08 /* CalendarSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2422EF231FD4CB4400454C08 /* CalendarSegue.swift */; };
 		2422EF261FD7A20F00454C08 /* UnitSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2422EF251FD7A20F00454C08 /* UnitSelectorViewController.swift */; };
+		247F6D881FE375A700B6F7AD /* IntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247F6D871FE375A700B6F7AD /* IntroVC.swift */; };
+		24F41C811FE379A100077EB7 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F41C801FE379A100077EB7 /* CalendarVC.swift */; };
+		24F41C831FE37B0400077EB7 /* BoughtAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F41C821FE37B0400077EB7 /* BoughtAmountVC.swift */; };
+		24F41C851FE3805D00077EB7 /* CalculateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F41C841FE3805D00077EB7 /* CalculateVC.swift */; };
 		3F9B9BF2A34EB9DA0DDAEF03 /* Pods_IfCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B0373268A1C19186A920DD /* Pods_IfCrypto.framework */; };
 		4964644D3A5F5B873CF7E363 /* Pods_IfCryptoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFFE0111BCCB8133BB3DD90E /* Pods_IfCryptoTests.framework */; };
 		8181117B52BA3539ED92DBC0 /* Pods_IfCryptoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6813EA6AC47BDBEBE5E55CCA /* Pods_IfCryptoUITests.framework */; };
@@ -56,6 +60,10 @@
 		2422EF211FD4C2FD00454C08 /* bitcoinData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bitcoinData.json; path = ../../../../../PycharmProjects/untitled/bitcoinData.json; sourceTree = "<group>"; };
 		2422EF231FD4CB4400454C08 /* CalendarSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSegue.swift; sourceTree = "<group>"; };
 		2422EF251FD7A20F00454C08 /* UnitSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitSelectorViewController.swift; sourceTree = "<group>"; };
+		247F6D871FE375A700B6F7AD /* IntroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroVC.swift; sourceTree = "<group>"; };
+		24F41C801FE379A100077EB7 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		24F41C821FE37B0400077EB7 /* BoughtAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoughtAmountVC.swift; sourceTree = "<group>"; };
+		24F41C841FE3805D00077EB7 /* CalculateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateVC.swift; sourceTree = "<group>"; };
 		26E77D56AE477519851A0B9D /* Pods-IfCryptoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfCryptoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IfCryptoUITests/Pods-IfCryptoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		40B0373268A1C19186A920DD /* Pods_IfCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IfCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		438FF44DC5C790777A65F4CE /* Pods-IfCryptoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfCryptoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IfCryptoTests/Pods-IfCryptoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +137,10 @@
 				2422EEFA1FD4A21A00454C08 /* LaunchScreen.storyboard */,
 				2422EEFD1FD4A21A00454C08 /* Info.plist */,
 				2422EF251FD7A20F00454C08 /* UnitSelectorViewController.swift */,
+				247F6D871FE375A700B6F7AD /* IntroVC.swift */,
+				24F41C801FE379A100077EB7 /* CalendarVC.swift */,
+				24F41C821FE37B0400077EB7 /* BoughtAmountVC.swift */,
+				24F41C841FE3805D00077EB7 /* CalculateVC.swift */,
 			);
 			path = IfCrypto;
 			sourceTree = "<group>";
@@ -478,7 +490,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				247F6D881FE375A700B6F7AD /* IntroVC.swift in Sources */,
 				2422EEF41FD4A21A00454C08 /* ViewController.swift in Sources */,
+				24F41C811FE379A100077EB7 /* CalendarVC.swift in Sources */,
+				24F41C851FE3805D00077EB7 /* CalculateVC.swift in Sources */,
+				24F41C831FE37B0400077EB7 /* BoughtAmountVC.swift in Sources */,
 				2422EF261FD7A20F00454C08 /* UnitSelectorViewController.swift in Sources */,
 				2422EEF21FD4A21A00454C08 /* AppDelegate.swift in Sources */,
 				2422EF241FD4CB4400454C08 /* CalendarSegue.swift in Sources */,
@@ -649,8 +665,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C4588H2WW4;
+				DEVELOPMENT_TEAM = G3U6CEW26C;
 				INFOPLIST_FILE = IfCrypto/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ModalApps.IfCrypto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -665,8 +682,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C4588H2WW4;
+				DEVELOPMENT_TEAM = G3U6CEW26C;
 				INFOPLIST_FILE = IfCrypto/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ModalApps.IfCrypto;
 				PRODUCT_NAME = "$(TARGET_NAME)";

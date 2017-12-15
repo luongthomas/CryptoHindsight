@@ -178,6 +178,7 @@ class MainCryptoInput: UIViewController, FSCalendarDelegate, FSCalendarDataSourc
         
         let profits = "\(valueOfTotalCoinsToday)"
         print("You would have \(valueOfTotalCoinsToday)")
+        self.totalProfitLbl.text = "\(valueOfTotalCoinsToday)"
         
         return profits
     }
