@@ -79,7 +79,15 @@ class CalculateVC: UIViewController {
             sleep(3)
             totalWorth = calculateProfits()
             if let worth = totalWorth {
-                resultsLbl.text = worth
+                if let amount = self.amountBought {
+                    if let day = self.selectedDay {
+                        var result = "You would have \n\n$\(worth)\n\n profit today if "
+                        result += "you had invested\n\n$\(amount) \n\non\n\n \(day)."
+                        resultsLbl.text = result
+                    }
+                }
+                
+                
             }
             
             UIViewController.removeSpinner(spinner: sv)
