@@ -22,7 +22,8 @@ class IntroVC: UIViewController {
         var introText = "Welcome to CryptoHindsight\n\n You can calculate the amount of \n "
         introText += "Bitcoin you would have earned \n if you had invested earlier!"
         introLabel.text = introText
-        
+        //bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerAdView.rootViewController = self
         bannerAdView.load(GADRequest())
     }
 

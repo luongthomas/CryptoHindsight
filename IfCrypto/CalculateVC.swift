@@ -131,7 +131,7 @@ class CalculateVC: UIViewController {
         if let day = self.selectedDay {
             fullUrl = baseUrl + "start=\(day)&end=\(day)"
         }
-        
+        print(fullUrl)
         Alamofire.request(fullUrl, method: .get).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
@@ -158,7 +158,8 @@ class CalculateVC: UIViewController {
                 if let investment = self.amountBought {
                     
                     let numberOfCoins:Double = (Double(investment)! / Double(costBefore)!)
-                    let totalWorth:Double = Double(numberOfCoins) * Double(costNow)!
+                    var totalWorth:Double = Double(numberOfCoins) * Double(costNow)!
+                    totalWorth -= Double(investment)!
                     profits = String(format: "%.2f", totalWorth)
                     
                     
