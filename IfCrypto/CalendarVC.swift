@@ -80,7 +80,7 @@ class CalendarVC: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
     
     func minimumDate(for calendar: FSCalendar) -> Date {
         var dateComponents = DateComponents()
-        dateComponents.year = 2017
+        dateComponents.year = 2013
         dateComponents.month = 9
         dateComponents.day = 5
         
