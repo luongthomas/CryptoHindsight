@@ -71,9 +71,6 @@ class CalculateVC: UIViewController {
         }
         
         
-        
-        
-        
     }
     
     
@@ -152,9 +149,11 @@ class CalculateVC: UIViewController {
                     
                     let numberOfCoins:Double = (Double(investment)! / Double(costBefore)!)
                     let totalWorth:Double = Double(numberOfCoins) * Double(costNow)!
+                    profits = String(format: "%.2f", totalWorth)
                     
-                    print("You would now have a total value of $\(totalWorth)")
-                    profits = "\(totalWorth)"
+                    
+                    print("You would now have a total value of $\(profits)")
+                    
                 } else {
                     print("Error: Investment is unknown")
                 }
