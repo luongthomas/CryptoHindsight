@@ -292,7 +292,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kON-VV-uFl" customClass="LGButton" customModule="LGButton">
-                                <rect key="frame" x="67" y="570" width="240" height="46"/>
+                                <rect key="frame" x="67" y="518" width="240" height="46"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -348,11 +348,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mOy-Rn-mj9" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="594" width="375" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83508743523316065" green="0.83508743523316065" blue="0.83508743523316065" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="adUnitID" value="ca-app-pub-6091580290614800/1986737461"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9ZJ-uw-QZ6" firstAttribute="trailing" secondItem="kON-VV-uFl" secondAttribute="trailing" constant="68" id="2h9-bf-O6E"/>
-                            <constraint firstItem="9ZJ-uw-QZ6" firstAttribute="bottom" secondItem="kON-VV-uFl" secondAttribute="bottom" constant="51" id="EGv-5l-Hwl"/>
+                            <constraint firstItem="9ZJ-uw-QZ6" firstAttribute="bottom" secondItem="kON-VV-uFl" secondAttribute="bottom" constant="103" id="EGv-5l-Hwl"/>
                             <constraint firstItem="kON-VV-uFl" firstAttribute="leading" secondItem="9ZJ-uw-QZ6" secondAttribute="leading" constant="67" id="nSb-bK-6MK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9ZJ-uw-QZ6"/>
@@ -368,7 +376,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="189.59999999999999" y="1410.9445277361319"/>
+            <point key="canvasLocation" x="189.59999999999999" y="1410.0449775112445"/>
         </scene>
         <!--Day Select-->
         <scene sceneID="9V1-4y-BZu">

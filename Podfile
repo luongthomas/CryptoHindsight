@@ -12,6 +12,7 @@ target 'IfCrypto' do
   pod 'FSCalendar'
   pod 'Charts'
   pod 'SwiftyJSON'
+  pod 'Firebase/AdMob'
 
   target 'IfCryptoTests' do
     inherit! :search_paths
