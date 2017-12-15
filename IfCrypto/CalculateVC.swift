@@ -81,8 +81,10 @@ class CalculateVC: UIViewController {
             if let worth = totalWorth {
                 if let amount = self.amountBought {
                     if let day = self.selectedDay {
+                        
+                        let dollars = String(format: "%.2f", amount)
                         var result = "You would have \n\n$\(worth)\n\n profit today if "
-                        result += "you had invested\n\n$\(amount) \n\non\n\n \(day)."
+                        result += "you had invested\n\n$\(dollars) \n\non\n\n \(day)."
                         resultsLbl.text = result
                     }
                 }

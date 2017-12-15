@@ -576,7 +576,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zJC-pj-tmY" userLabel="AmountStackView">
                                         <rect key="frame" x="20" y="49" width="270" height="30"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h4d-ZS-D7T">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="100" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h4d-ZS-D7T">
                                                 <rect key="frame" x="0.0" y="0.0" width="225" height="30"/>
                                                 <color key="backgroundColor" red="0.81508868991904637" green="0.93879746525399255" blue="0.94818652849740936" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
