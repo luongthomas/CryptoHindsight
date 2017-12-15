@@ -341,8 +341,8 @@
                                     <outletCollection property="gestureRecognizers" destination="ZkG-J5-Q3y" appends="YES" id="Jne-1k-BjC"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Introduction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pud-oD-lxq">
-                                <rect key="frame" x="67" y="87" width="240" height="105"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Introduction" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pud-oD-lxq">
+                                <rect key="frame" x="67" y="87" width="240" height="398"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
@@ -357,6 +357,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9ZJ-uw-QZ6"/>
                     </view>
+                    <connections>
+                        <outlet property="introLabel" destination="pud-oD-lxq" id="gpR-5U-gj8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iei-lp-vTW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="ZkG-J5-Q3y">
@@ -365,7 +368,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="190" y="1411"/>
+            <point key="canvasLocation" x="189.59999999999999" y="1410.9445277361319"/>
         </scene>
         <!--Day Select-->
         <scene sceneID="9V1-4y-BZu">
