@@ -10,7 +10,6 @@
 		2422EEF21FD4A21A00454C08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2422EEF11FD4A21A00454C08 /* AppDelegate.swift */; };
 		2422EEF41FD4A21A00454C08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2422EEF31FD4A21A00454C08 /* ViewController.swift */; };
 		2422EEF71FD4A21A00454C08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2422EEF51FD4A21A00454C08 /* Main.storyboard */; };
-		2422EEF91FD4A21A00454C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2422EEF81FD4A21A00454C08 /* Assets.xcassets */; };
 		2422EEFC1FD4A21A00454C08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2422EEFA1FD4A21A00454C08 /* LaunchScreen.storyboard */; };
 		2422EF071FD4A21A00454C08 /* IfCryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2422EF061FD4A21A00454C08 /* IfCryptoTests.swift */; };
 		2422EF121FD4A21A00454C08 /* IfCryptoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2422EF111FD4A21A00454C08 /* IfCryptoUITests.swift */; };
@@ -22,6 +21,7 @@
 		24F41C831FE37B0400077EB7 /* BoughtAmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F41C821FE37B0400077EB7 /* BoughtAmountVC.swift */; };
 		24F41C851FE3805D00077EB7 /* CalculateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F41C841FE3805D00077EB7 /* CalculateVC.swift */; };
 		24F41C871FE3AB8500077EB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24F41C861FE3AB8400077EB7 /* GoogleService-Info.plist */; };
+		24F41C891FE3AE4F00077EB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24F41C881FE3AE4E00077EB7 /* Assets.xcassets */; };
 		3F9B9BF2A34EB9DA0DDAEF03 /* Pods_IfCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B0373268A1C19186A920DD /* Pods_IfCrypto.framework */; };
 		4964644D3A5F5B873CF7E363 /* Pods_IfCryptoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFFE0111BCCB8133BB3DD90E /* Pods_IfCryptoTests.framework */; };
 		8181117B52BA3539ED92DBC0 /* Pods_IfCryptoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6813EA6AC47BDBEBE5E55CCA /* Pods_IfCryptoUITests.framework */; };
@@ -49,7 +49,6 @@
 		2422EEF11FD4A21A00454C08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2422EEF31FD4A21A00454C08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2422EEF61FD4A21A00454C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2422EEF81FD4A21A00454C08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2422EEFB1FD4A21A00454C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2422EEFD1FD4A21A00454C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2422EF021FD4A21A00454C08 /* IfCryptoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IfCryptoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +65,7 @@
 		24F41C821FE37B0400077EB7 /* BoughtAmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoughtAmountVC.swift; sourceTree = "<group>"; };
 		24F41C841FE3805D00077EB7 /* CalculateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateVC.swift; sourceTree = "<group>"; };
 		24F41C861FE3AB8400077EB7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		24F41C881FE3AE4E00077EB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26E77D56AE477519851A0B9D /* Pods-IfCryptoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfCryptoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IfCryptoUITests/Pods-IfCryptoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		40B0373268A1C19186A920DD /* Pods_IfCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IfCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		438FF44DC5C790777A65F4CE /* Pods-IfCryptoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IfCryptoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IfCryptoTests/Pods-IfCryptoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,8 +135,8 @@
 				2422EEF31FD4A21A00454C08 /* ViewController.swift */,
 				2422EEF51FD4A21A00454C08 /* Main.storyboard */,
 				2422EF231FD4CB4400454C08 /* CalendarSegue.swift */,
-				2422EEF81FD4A21A00454C08 /* Assets.xcassets */,
 				2422EEFA1FD4A21A00454C08 /* LaunchScreen.storyboard */,
+				24F41C881FE3AE4E00077EB7 /* Assets.xcassets */,
 				2422EEFD1FD4A21A00454C08 /* Info.plist */,
 				2422EF251FD7A20F00454C08 /* UnitSelectorViewController.swift */,
 				247F6D871FE375A700B6F7AD /* IntroVC.swift */,
@@ -306,10 +306,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2422EEFC1FD4A21A00454C08 /* LaunchScreen.storyboard in Resources */,
-				2422EEF91FD4A21A00454C08 /* Assets.xcassets in Resources */,
 				24F41C871FE3AB8500077EB7 /* GoogleService-Info.plist in Resources */,
 				2422EF221FD4C2FE00454C08 /* bitcoinData.json in Resources */,
 				2422EEF71FD4A21A00454C08 /* Main.storyboard in Resources */,
+				24F41C891FE3AE4F00077EB7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

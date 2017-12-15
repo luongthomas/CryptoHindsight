@@ -354,6 +354,7 @@
                                 <color key="backgroundColor" red="0.83508743523316065" green="0.83508743523316065" blue="0.83508743523316065" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="adUnitID" value="ca-app-pub-6091580290614800/1986737461"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoloadEnabled" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -366,6 +367,7 @@
                         <viewLayoutGuide key="safeArea" id="9ZJ-uw-QZ6"/>
                     </view>
                     <connections>
+                        <outlet property="bannerAdView" destination="mOy-Rn-mj9" id="dgI-fr-oV5"/>
                         <outlet property="introLabel" destination="pud-oD-lxq" id="gpR-5U-gj8"/>
                     </connections>
                 </viewController>
@@ -587,7 +589,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zJC-pj-tmY" userLabel="AmountStackView">
                                         <rect key="frame" x="20" y="49" width="270" height="30"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="100" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h4d-ZS-D7T">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" borderStyle="bezel" placeholder="100" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h4d-ZS-D7T">
                                                 <rect key="frame" x="0.0" y="0.0" width="225" height="30"/>
                                                 <color key="backgroundColor" red="0.81508868991904637" green="0.93879746525399255" blue="0.94818652849740936" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -791,21 +793,6 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1888.8" y="2356.3718140929536"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="n33-Kh-i6i">
-            <objects>
-                <viewController id="2ao-fw-Re9" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7lO-wr-LEY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="jxX-Ne-8PQ"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8R4-ef-GLC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2843" y="2342"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="4p7-EZ-mcZ">

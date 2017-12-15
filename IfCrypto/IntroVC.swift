@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class IntroVC: UIViewController {
 
+    @IBOutlet weak var bannerAdView: GADBannerView!
     
     @IBOutlet weak var introLabel: UILabel!
     
@@ -20,6 +22,8 @@ class IntroVC: UIViewController {
         var introText = "Welcome to CryptoHindsight\n\n You can calculate the amount of \n "
         introText += "Bitcoin you would have earned \n if you had invested earlier!"
         introLabel.text = introText
+        
+        bannerAdView.load(GADRequest())
     }
 
     override func viewDidAppear(_ animated: Bool) {
