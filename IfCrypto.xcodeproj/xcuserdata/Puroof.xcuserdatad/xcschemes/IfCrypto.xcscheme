@@ -115,6 +115,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "CryptoHindsight"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
